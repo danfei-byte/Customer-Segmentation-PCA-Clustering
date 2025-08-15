@@ -28,16 +28,23 @@ The dataset includes:
   - Selected **3 components** (explained ~56% variance) based on scree plot elbow.
   - Interpreted PCA loadings to understand behavioral patterns.
 
+    <img src="https://github.com/danfei-byte/Customer-Segmentation-PCA-Clustering/blob/f85ec0465cfcbb1446a08c58c756d0f84a070349/scree_plot.png" width="700">
+
 ### 3. Clustering
   - Applied **K-Means** to standardized PCA scores.
   - Chose **K = 4** (Elbow Method; K=5/7 also plausible; opted for simplicity/interpretability).
   - **Silhouette Score**: 0.359 (moderate separation).
   - Merged cluster labels back to original data for demographic/value profiling.
 
+    <img src="https://github.com/danfei-byte/Customer-Segmentation-PCA-Clustering/blob/f85ec0465cfcbb1446a08c58c756d0f84a070349/elbow_plot.png" width="700">
+
 ## PCA Interpretation (high level)
 - **PC1:** Higher spend/income and frequent purchases across core categories; negatively aligned with larger family structure.
 - **PC2:** Digital/promotions engagement (web purchases, deal usage) and larger households with teens/kids; less tied to niche/premium categories.
 - **PC3:** Longer tenure and higher web visit frequency; negatively aligned with older age/higher education/family-with-teens → skew younger, digitally active.
+
+   <img src="https://github.com/danfei-byte/Customer-Segmentation-PCA-Clustering/blob/f85ec0465cfcbb1446a08c58c756d0f84a070349/pca_loadings.png" width="500"> <img src="https://github.com/danfei-byte/Customer-Segmentation-PCA-Clustering/blob/f85ec0465cfcbb1446a08c58c756d0f84a070349/pc1_pc2_scatter_clusters.png" width="500">
+
 
 ## Cluster Profiles (behavior aligned with PCA + factual summaries)
 
@@ -61,6 +68,9 @@ The dataset includes:
 - **Facts:** Income **$48,771**; Age **61.7** (oldest); Children **1.53**; Family Size **2.26**; **99%** parents; **Spent ≈ $268**.
 - **Use:** Seasonal pushes, curated bundles, reactivation cadence.
 
+   <image src="https://github.com/danfei-byte/Customer-Segmentation-PCA-Clustering/blob/f85ec0465cfcbb1446a08c58c756d0f84a070349/cluster_bars_income_age_spent.png" width="3000">
+
+
 ## Managerial Insights
 - **C1:** Creator/community programs; lifestyle campaigns; multi-channel journeys.
 - **C2:** Prioritize retention; premium exclusives; early access; white-glove service.
@@ -77,6 +87,5 @@ The dataset includes:
 - **Python**: pandas, numpy, seaborn, matplotlib, scikit-learn
 - **Techniques**: PCA, K-Means, Elbow Method, Silhouette Score
 
-The full notebook can be found [here]()
+The full notebook can be found [here](https://github.com/danfei-byte/Customer-Segmentation-PCA-Clustering/blob/f85ec0465cfcbb1446a08c58c756d0f84a070349/Customer%20Segmentation%20with%20PCA%20%26%20K-Means5.ipynb).
 
-The R code utilized to clean, organize, analyze, and visualize the data can be found [here](analysis.R).
